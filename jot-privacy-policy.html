@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,38 +32,42 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Effective Date: July 26, 2026 | App: Jamaat on Time</p>
+        <p class="last-updated">Effective Date: August 9, 2026 | Developer: Tranquility Software | App: Jamaat on Time</p>
 
         <p>Welcome to <strong>Jamaat on Time</strong>. Your privacy is deeply important to us. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
 
         <h2>1. Information We Collect</h2>
         <ul>
-            <li><strong>Location Data:</strong> With your permission, the app accesses your precise and coarse location (GPS) solely while the app is in use to calculate distances to nearby masājid and display them on the map. We do <strong>not</strong> track your location in the background or store your location history on remote servers.</li>
-            <li><strong>Account & Feedback Data:</strong> If you sign in via Google to contribute timings or submit contact messages, we collect basic profile info (Name, Email) to authenticate voluntary timing edits and respond to feedback.</li>
+            <li><strong>GPS Location Data:</strong> With your permission, the app accesses your device GPS coordinates solely while the app is in use to calculate distances to nearby masājid and center the map. We do <strong>not</strong> track your location in the background or store location history on remote servers.</li>
+            <li><strong>IP Geolocation Estimation:</strong> If location permission is denied or unavailable, the app uses your IP address (via ipapi.co) to estimate your city so relevant masājid and local prayer times can still be displayed. Your IP address is processed transiently for city estimation and is never stored.</li>
+            <li><strong>Account & Contact Data:</strong> If you sign in via Google to contribute timings or submit a message via our Contact form, we collect your Name, Email, and message text to authenticate voluntary timing edits and respond to inquiries.</li>
         </ul>
 
         <h2>2. How We Use Information</h2>
         <ul>
-            <li>To display nearby masājid and accurate Jama'at timings relative to your current location.</li>
-            <li>To manage crowd-sourced Jama'at timing contributions and prevent spam.</li>
-            <li>To respond to user support messages and feedback.</li>
+            <li>To display nearby masājid and accurate Jama'at timings relative to your position.</li>
+            <li>To estimate your city via IP address when GPS location permission is disabled.</li>
+            <li>To manage voluntary timing contributions and prevent spam.</li>
+            <li>To route contact form inquiries to app administrators so we can assist you.</li>
         </ul>
 
-        <h2>3. Third-Party Services</h2>
-        <p>Our app utilizes trusted third-party services that may collect information used to identify you:</p>
+        <h2>3. Third-Party Services & Data Processors</h2>
+        <p>Our app utilizes trusted third-party service providers that process data to deliver core functionality:</p>
         <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank">Google Maps SDK & Play Services</a></li>
-            <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Services (Firestore, Auth)</a></li>
+            <li><a href="https://policies.google.com/privacy" target="_blank">Google Maps SDK, Geocoding & Places API</a> (Map rendering and location search)</li>
+            <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Firestore & Authentication)</a> (Mosque timing database & volunteer sign-in)</li>
+            <li><a href="https://ipapi.co/privacy/" target="_blank">ipapi.co</a> (IP-based city estimation fallback when GPS permission is denied)</li>
+            <li><a href="https://telegram.org/privacy" target="_blank">Telegram Bot API</a> (Secure transmission of contact form messages to administrators)</li>
         </ul>
 
         <h2>4. Data Retention & Security</h2>
-        <p>We implement security best practices to protect your data. Location data processed locally is cleared when the app is closed. We do not sell or share personal data with third-party advertisers.</p>
+        <p>We implement security best practices to protect your data. Location data processed locally is cleared when the app is closed. We do <strong>not</strong> sell, rent, or share personal data with third-party advertisers or data brokers.</p>
 
         <h2>5. Children's Privacy</h2>
         <p>Our application does not knowingly collect personal identifiable information from children under 13.</p>
 
         <h2>6. Contact Us</h2>
-        <p>If you have any questions or suggestions regarding our Privacy Policy, feel free to contact us at <strong>aekae47@gmail.com</strong>.</p>
+        <p>If you have any questions, suggestions, or data removal requests regarding our Privacy Policy, feel free to contact us at <strong><a href="mailto:tranquilitysoftw@gmail.com">tranquilitysoftw@gmail.com</a></strong>.</p>
     </div>
 </body>
 </html>
