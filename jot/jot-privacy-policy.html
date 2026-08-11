@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Jamaat on Time | Tranquility Software</title>
+    <meta name="description" content="Privacy Policy for Jamaat on Time mobile application developed by Tranquility Software.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12031c;
+            --bg-card: rgba(31, 6, 46, 0.75);
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #9e7912 100%);
+            --text-light: #f8fafc;
+            --text-subtle: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --shadow-gold: 0 10px 30px -10px rgba(212, 175, 55, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(138, 43, 226, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0.1) 0%, transparent 45%);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            background: rgba(18, 3, 28, 0.85);
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo img {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            border: 1.5px solid var(--gold-primary);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .brand-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-back {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(243, 229, 171, 0.5);
+        }
+
+        /* Main Card Container */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(16px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 28px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--text-subtle);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            color: var(--text-subtle);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: var(--text-light);
+        }
+
+        a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--gold-light);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-gold);
+            background: rgba(18, 3, 28, 0.95);
+            padding: 30px 24px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .policy-card { padding: 24px 18px; }
+            h1 { font-size: 26px; }
+            h2 { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="jot-index.html" class="brand-logo">
+                <img src="logo.jpg" alt="Tranquility Software Logo">
+                <span class="brand-name">Tranquility Software</span>
+            </a>
+            <a href="jot-index.html" class="nav-back">← Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="policy-card">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Effective Date: August 9, 2026 | Developer: Tranquility Software | App: Jamaat on Time</p>
+
+            <p>Welcome to <strong>Jamaat on Time</strong>. Your privacy is deeply important to us. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application.</p>
+
+            <h2>1. Information We Collect</h2>
+            <ul>
+                <li><strong>GPS Location Data:</strong> With your permission, the app accesses your device GPS coordinates solely while the app is in use to calculate distances to nearby masājid and center the map. We do <strong>not</strong> track your location in the background or store location history on remote servers.</li>
+                <li><strong>IP Geolocation Estimation:</strong> If location permission is denied or unavailable, the app uses your IP address (via ipapi.co) to estimate your city so relevant masājid and local prayer times can still be displayed. Your IP address is processed transiently for city estimation and is never stored.</li>
+                <li><strong>Account & Contact Data:</strong> If you sign in via Google to contribute timings or submit a message via our Contact form, we collect your Name, Email, and message text to authenticate voluntary timing edits and respond to inquiries.</li>
+            </ul>
+
+            <h2>2. How We Use Information</h2>
+            <ul>
+                <li>To display nearby masājid and accurate Jama'at timings relative to your position.</li>
+                <li>To estimate your city via IP address when GPS location permission is disabled.</li>
+                <li>To manage voluntary timing contributions and prevent spam.</li>
+                <li>To route contact form inquiries to app administrators so we can assist you.</li>
+            </ul>
+
+            <h2>3. Third-Party Services & Data Processors</h2>
+            <p>Our app utilizes trusted third-party service providers that process data to deliver core functionality:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank">Google Maps SDK, Geocoding & Places API</a> (Map rendering and location search)</li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Firestore & Authentication)</a> (Mosque timing database & volunteer sign-in)</li>
+                <li><a href="https://ipapi.co/privacy/" target="_blank">ipapi.co</a> (IP-based city estimation fallback when GPS permission is denied)</li>
+                <li><a href="https://telegram.org/privacy" target="_blank">Telegram Bot API</a> (Secure transmission of contact form messages to administrators)</li>
+            </ul>
+
+            <h2>4. Data Retention & Security</h2>
+            <p>We implement security best practices to protect your data. Location data processed locally is cleared when the app is closed. We do <strong>not</strong> sell, rent, or share personal data with third-party advertisers or data brokers.</p>
+
+            <h2>5. Children's Privacy</h2>
+            <p>Our application does not knowingly collect personal identifiable information from children under 13.</p>
+
+            <h2>6. Account & Data Deletion</h2>
+            <p>You have the right to request deletion of your account and personal data at any time. Visit our <a href="jot-delete-account.html">Account & Data Deletion Page</a> to submit an online deletion request.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions, suggestions, or data removal requests regarding our Privacy Policy, feel free to contact us at <strong><a href="mailto:tranquilitysoftw@gmail.com">tranquilitysoftw@gmail.com</a></strong>.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="jot-index.html">Home</a></li>
+            <li><a href="jot-privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="jot-delete-account.html">Account Deletion</a></li>
+            <li><a href="mailto:tranquilitysoftw@gmail.com">Contact</a></li>
+        </ul>
+        <p class="copyright">© 2026 Tranquility Software. All rights reserved. Technology With Purpose.</p>
+    </footer>
+
+</body>
+</html>
