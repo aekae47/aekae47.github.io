@@ -45,15 +45,16 @@
             color: #0f172a;
             margin-bottom: 6px;
         }
-        input, textarea {
+        input, select, textarea {
             width: 100%;
             padding: 10px 14px;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             font-size: 14px;
             box-sizing: border-box;
+            background-color: #ffffff;
         }
-        input:focus, textarea:focus {
+        input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: #059669;
             box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
@@ -99,16 +100,23 @@
         <h1>Account & Data Deletion Request</h1>
         <p class="app-info">App: Jamaat on Time | Developer: Tranquility Software</p>
 
-        <p>At <strong>Tranquility Software</strong>, we respect your right to privacy and control over your personal information. If you wish to delete your <strong>Jamaat on Time</strong> user account and all associated personal data, you can submit a deletion request below or via email.</p>
+        <p>At <strong>Tranquility Software</strong>, we respect your right to privacy and control over your personal information. You may request to <strong>delete your entire account along with all personal data</strong>, OR request to <strong>delete personal data only while keeping your account active</strong>.</p>
 
-        <h2>1. Steps to Request Account & Data Deletion</h2>
-        <p>You can request account deletion using either of the following two options:</p>
+        <h2>1. Steps to Request Deletion</h2>
+        <p>You can submit your request using either of the options below:</p>
 
-        <h3>Option A: Online Deletion Request Form (Instant Submission)</h3>
-        <p>Fill out the form below. Our system will immediately process and notify our admin team to permanently remove your user record.</p>
+        <h3>Option A: Online Request Form (Instant Submission)</h3>
+        <p>Select your request type below and fill out the form. Our admin team will receive your submission immediately and complete your request within 7 days.</p>
 
         <div class="form-card">
             <form id="deletionForm">
+                <div class="form-group">
+                    <label for="requestType">What would you like to delete? *</label>
+                    <select id="requestType" required>
+                        <option value="Full Account & Data Deletion">Delete My Entire Account & All Personal Data</option>
+                        <option value="Data Only (Keep Account Active)">Delete My Personal Data Only (Keep Account Active)</option>
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="email">Account Email Address *</label>
                     <input type="email" id="email" required placeholder="The email address linked to your Jamaat on Time account">
@@ -118,34 +126,44 @@
                     <input type="text" id="name" placeholder="Your name as displayed in the app">
                 </div>
                 <div class="form-group">
-                    <label for="reason">Reason for Deletion (Optional)</label>
-                    <textarea id="reason" rows="3" placeholder="Tell us why you are requesting account deletion..."></textarea>
+                    <label for="reason">Additional Details / Notes (Optional)</label>
+                    <textarea id="reason" rows="3" placeholder="Specific data to purge or reason for request..."></textarea>
                 </div>
-                <button type="submit" id="submitBtn">Submit Account Deletion Request</button>
+                <button type="submit" id="submitBtn">Submit Request</button>
             </form>
             <div id="successMsg" class="success-banner">
-                ✓ Account deletion request submitted successfully! Your account and associated personal data will be completely deleted within 7 days.
+                ✓ Request submitted successfully! Your request will be processed and completed within 7 days.
             </div>
             <div id="errorMsg" class="error-banner">
                 ✕ Submission failed. Please try again or email us directly at tranquilitysoftw@gmail.com.
             </div>
         </div>
 
-        <h3>Option B: Email Deletion Request</h3>
-        <p>Send an email to <strong><a href="mailto:tranquilitysoftw@gmail.com?subject=Account Deletion Request - Jamaat on Time">tranquilitysoftw@gmail.com</a></strong> with the subject line <code>"Account Deletion Request - Jamaat on Time"</code> from the email address associated with your account.</p>
+        <h3>Option B: Email Request</h3>
+        <p>Send an email to <strong><a href="mailto:tranquilitysoftw@gmail.com?subject=Account / Data Deletion Request - Jamaat on Time">tranquilitysoftw@gmail.com</a></strong> specifying whether you want full account deletion or data-only deletion.</p>
 
-        <h2>2. What Data Is Deleted</h2>
-        <p>Upon processing your deletion request, the following user data is permanently purged from our servers (Firebase & Databases):</p>
+        <h2>2. Data Handling & Scope</h2>
+        
+        <h3>Full Account & Data Deletion</h3>
+        <p>If you choose to delete your entire account, all of the following data is permanently purged:</p>
         <ul>
-            <li><strong>User Account Profile:</strong> Your user ID, registered email address, display name, and volunteer status.</li>
-            <li><strong>Personal Favorites & Custom Lists:</strong> Your saved masājid bookmarks, custom list categories (Home, Work, etc.), and custom list ordering.</li>
-            <li><strong>Support Messages:</strong> Any past contact form messages linked to your email address.</li>
+            <li><strong>Account Credentials & Profile:</strong> User ID, registered email, display name, and volunteer status.</li>
+            <li><strong>Saved Favorites & Lists:</strong> Bookmarks, custom list categories (Home, Work, etc.), and list order.</li>
+            <li><strong>Support Messages:</strong> Contact form inquiries linked to your email address.</li>
         </ul>
 
-        <h2>3. What Data Is Retained & Additional Retention Period</h2>
+        <h3>Data-Only Deletion (Keep Account Active)</h3>
+        <p>If you choose to delete personal data only, your account remains active so you can continue contributing, while the following personal data is cleared:</p>
         <ul>
-            <li><strong>Crowdsourced Masjid Timings:</strong> Publicly submitted Jama'at timings for masājid remain in the app database to serve the community. These records contain <strong>no personal user identifiers</strong> or account data.</li>
-            <li><strong>Processing Timeline:</strong> Deletion requests are processed and completed within <strong>7 business days</strong>. Once deleted, your account cannot be recovered.</li>
+            <li>Purges all saved personal lists, favorites, and list ordering.</li>
+            <li>Clears past contact form inquiry history.</li>
+            <li>Resets account preferences while retaining login capability.</li>
+        </ul>
+
+        <h2>3. What Data Is Retained & Retention Period</h2>
+        <ul>
+            <li><strong>Crowdsourced Masjid Timings:</strong> Publicly submitted Jama'at timings for masājid remain in the app database to serve the community. These public records contain <strong>no personal user identifiers</strong> or account data.</li>
+            <li><strong>Processing Timeline:</strong> Requests are processed and completed within <strong>7 business days</strong>.</li>
         </ul>
 
         <h2>4. Contact & Support</h2>
@@ -160,7 +178,7 @@
 
         // Base64 decoded Telegram credentials at runtime
         const botToken = atob('ODUzNDY4MDkxMjpBQUZMODEwc0tTa0xWZXM0X0dQVXppbUVsRFlYZXA5WHl4VE0=');
-        const chatId = atob('ODA5MzAyOTY4Nw==');
+        const chatId = atob('ODA9MzAyOTY4Nw==');
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -169,14 +187,16 @@
             successMsg.style.display = 'none';
             errorMsg.style.display = 'none';
 
+            const requestType = document.getElementById('requestType').value;
             const email = document.getElementById('email').value.trim();
             const name = document.getElementById('name').value.trim() || 'Not provided';
             const reason = document.getElementById('reason').value.trim() || 'None provided';
 
-            const messageText = `⚠️ *Jamaat on Time - Account Deletion Request*\n\n` +
+            const messageText = `⚠️ *Jamaat on Time - Deletion Request*\n\n` +
+                                `📋 *Request Type:* ${requestType}\n` +
                                 `📧 *Email:* ${email}\n` +
                                 `👤 *Name:* ${name}\n` +
-                                `📝 *Reason:* ${reason}\n` +
+                                `📝 *Notes:* ${reason}\n` +
                                 `📅 *Timestamp:* ${new Date().toISOString()}`;
 
             try {
@@ -201,7 +221,7 @@
                 console.error(err);
                 errorMsg.style.display = 'block';
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit Account Deletion Request';
+                submitBtn.textContent = 'Submit Request';
             }
         });
     </script>
