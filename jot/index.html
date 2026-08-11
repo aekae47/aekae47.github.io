@@ -1,1 +1,662 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquility Software - Technology With Purpose</title>
+    <meta name="description" content="Tranquility Software builds modern, privacy-focused, high-quality applications that serve communities worldwide. Creators of Jamaat on Time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #12031c;
+            --bg-card: rgba(31, 6, 46, 0.7);
+            --bg-card-hover: rgba(42, 9, 61, 0.85);
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-dark: #aa820a;
+            --gold-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #9e7912 100%);
+            --text-light: #f8fafc;
+            --text-subtle: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-gold: rgba(212, 175, 55, 0.3);
+            --shadow-gold: 0 10px 30px -10px rgba(212, 175, 55, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(138, 43, 226, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(212, 175, 55, 0.1) 0%, transparent 45%);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            background: rgba(18, 3, 28, 0.85);
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 8px;
+            border: 1.5px solid var(--gold-primary);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .brand-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-subtle);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+            text-shadow: 0 0 8px rgba(243, 229, 171, 0.5);
+        }
+
+        .btn-gold-sm {
+            background: var(--gold-gradient);
+            color: #12031c !important;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 700 !important;
+            font-size: 13px !important;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .btn-gold-sm:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border-gold);
+            box-shadow: var(--shadow-gold);
+            margin-bottom: 48px;
+            background: var(--bg-card);
+        }
+
+        .hero-banner-img {
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-content {
+            padding: 40px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(18, 3, 28, 0.4) 0%, rgba(18, 3, 28, 0.95) 100%);
+        }
+
+        .hero-tagline {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--gold-primary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: var(--text-subtle);
+            max-width: 720px;
+            margin: 0 auto 28px;
+        }
+
+        /* Section Headings */
+        .section-header {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* App Card Section */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .app-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            padding: 36px;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .app-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--gold-primary);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-2px);
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background: #059669;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.4);
+            border: 2px solid var(--gold-primary);
+        }
+
+        .app-icon svg {
+            width: 54px;
+            height: 54px;
+            fill: #ffffff;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-light);
+            border: 1px solid var(--border-gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .app-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .app-summary {
+            color: var(--text-subtle);
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .app-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--text-subtle);
+        }
+
+        .feature-item span {
+            color: var(--gold-primary);
+            font-weight: 700;
+        }
+
+        .app-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: #12031c;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--gold-primary);
+            color: var(--gold-light);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-gold);
+            margin-bottom: 64px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: rgba(18, 3, 28, 0.7);
+            border: 1px solid var(--border-gold);
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+            background: rgba(18, 3, 28, 0.9);
+        }
+
+        .alert-banner {
+            display: none;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        .alert-success {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid #10b981;
+            color: #34d399;
+        }
+
+        .alert-error {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid #ef4444;
+            color: #f87171;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-gold);
+            background: rgba(18, 3, 28, 0.95);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .nav-container { padding: 12px 16px; }
+            .nav-links { gap: 12px; }
+            .nav-links a:not(.btn-gold-sm) { display: none; }
+            .hero-title { font-size: 30px; }
+            .hero-content { padding: 24px 16px; }
+            .app-card { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+            .app-icon { width: 72px; height: 72px; }
+            .app-icon svg { width: 40px; height: 40px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full { grid-column: span 1; }
+            .contact-section { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="jot-index.html" class="brand-logo">
+                <img src="logo.jpg" alt="Tranquility Software Logo">
+                <span class="brand-name">Tranquility Software</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#apps">Apps</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="jot-privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="jot-delete-account.html" class="btn-gold-sm">Account Deletion</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Hero Section with Custom Banner -->
+        <section class="hero">
+            <img src="banner.jpg" alt="Tranquility Software Banner" class="hero-banner-img">
+            <div class="hero-content">
+                <div class="hero-tagline">Technology With Purpose</div>
+                <h1 class="hero-title">Crafting Software That Serves Communities</h1>
+                <p class="hero-description">
+                    At <strong>Tranquility Software</strong>, we design modern, elegant, and privacy-focused applications built with purpose. We are dedicated to creating reliable digital solutions that connect communities and elevate daily life.
+                </p>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#apps" class="btn btn-primary">Explore Our Apps ↓</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Apps Section -->
+        <section id="apps" style="scroll-margin-top: 100px;">
+            <div class="section-header">
+                <h2 class="section-title">Our Applications</h2>
+                <p class="section-subtitle">Purpose-built software tailored for real-world impact</p>
+            </div>
+
+            <div class="apps-grid">
+                <!-- App Card: Jamaat on Time -->
+                <div class="app-card">
+                    <div class="app-icon">
+                        <svg viewBox="0 0 640 512">
+                            <path d="M0 480c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V160H0v320zm579.16-192c17.86-17.39 28.84-37.34 28.84-58.91 0-52.86-41.79-93.79-87.92-122.9-41.94-26.47-80.63-57.77-111.96-96.22L400 0l-8.12 9.97c-31.33 38.45-70.01 69.76-111.96 96.22C233.79 135.3 192 176.23 192 229.09c0 21.57 10.98 41.52 28.84 58.91h358.32zM608 320H192c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h32v-64c0-17.67 14.33-32 32-32s32 14.33 32 32v64h64v-72c0-48 48-72 48-72s48 24 48 72v72h64v-64c0-17.67 14.33-32 32-32s32 14.33 32 32v64h32c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM64 0S0 32 0 96v32h128V96c0-64-64-96-64-96z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="app-badge">Flagship App</span>
+                        <h3 class="app-title">Jamaat on Time</h3>
+                        <p class="app-summary">
+                            Your essential companion for finding accurate Jamāʿah (Iqāmah) prayer timings at masājid near you. Never miss congregation prayer again with real-time countdown timers, interactive distance maps, and community-verified timings.
+                        </p>
+                        <div class="app-features">
+                            <div class="feature-item"><span>✓</span> Accurate Iqāmah Countdown</div>
+                            <div class="feature-item"><span>✓</span> Real-Time GPS & Map Finder</div>
+                            <div class="feature-item"><span>✓</span> 100% Free & Zero Advertisements</div>
+                            <div class="feature-item"><span>✓</span> Crowd-Sourced & Community Verified</div>
+                        </div>
+                        <div class="app-actions">
+                            <a href="https://play.google.com/store/apps/details?id=com.tranquility.jamaatontime" target="_blank" class="btn btn-primary">
+                                🤖 Get on Google Play
+                            </a>
+                            <a href="jot-privacy-policy.html" class="btn btn-secondary">Privacy Policy</a>
+                            <a href="jot-delete-account.html" class="btn btn-secondary">Delete Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section" style="scroll-margin-top: 100px;">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Have questions, feedback, or need support? We'd love to hear from you.</p>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="cName">Your Name *</label>
+                        <input type="text" id="cName" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">Your Email *</label>
+                        <input type="email" id="cEmail" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group full">
+                        <label for="cSubject">Subject</label>
+                        <input type="text" id="cSubject" placeholder="How can we help you?">
+                    </div>
+                    <div class="form-group full">
+                        <label for="cMessage">Message *</label>
+                        <textarea id="cMessage" rows="5" required placeholder="Write your message here..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="cSubmitBtn" class="btn btn-primary" style="width: 100%; justify-content: center; font-size: 15px;">
+                    Send Message
+                </button>
+            </form>
+
+            <div id="cSuccessAlert" class="alert-banner alert-success">
+                ✓ Message sent successfully! Thank you for reaching out to Tranquility Software.
+            </div>
+            <div id="cErrorAlert" class="alert-banner alert-error">
+                ✕ Unable to send message right now. Please email us directly at tranquilitysoftw@gmail.com.
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="jot-index.html" class="brand-logo">
+                <img src="logo.jpg" alt="Tranquility Software Logo" style="width: 36px; height: 36px;">
+                <span class="brand-name" style="font-size: 18px;">Tranquility Software</span>
+            </a>
+            <ul class="footer-links">
+                <li><a href="jot-index.html">Home</a></li>
+                <li><a href="#apps">Apps</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="jot-privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="jot-delete-account.html">Account & Data Deletion</a></li>
+                <li><a href="mailto:tranquilitysoftw@gmail.com">tranquilitysoftw@gmail.com</a></li>
+            </ul>
+            <p class="copyright">© 2026 Tranquility Software. All rights reserved. Technology With Purpose.</p>
+        </div>
+    </footer>
+
+    <!-- Form Handler Script -->
+    <script>
+        const cForm = document.getElementById('contactForm');
+        const cSubmitBtn = document.getElementById('cSubmitBtn');
+        const cSuccessAlert = document.getElementById('cSuccessAlert');
+        const cErrorAlert = document.getElementById('cErrorAlert');
+
+        // Base64 decoded Telegram credentials at runtime
+        const botToken = atob('ODUzNDY4MDkxMjpBQUZMODEwc0tTa0xWZXM0X0dQVXppbUVsRFlYZXA5WHl4VE0=');
+        const chatId = atob('ODA5MzAyOTY4Nw==');
+
+        cForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            cSubmitBtn.disabled = true;
+            cSubmitBtn.textContent = 'Sending Message...';
+            cSuccessAlert.style.display = 'none';
+            cErrorAlert.style.display = 'none';
+
+            const name = document.getElementById('cName').value.trim();
+            const email = document.getElementById('cEmail').value.trim();
+            const subject = document.getElementById('cSubject').value.trim() || 'General Inquiry';
+            const message = document.getElementById('cMessage').value.trim();
+
+            const textPayload = `📩 *Website Contact Form - Tranquility Software*\n\n` +
+                                `👤 *Name:* ${name}\n` +
+                                `📧 *Email:* ${email}\n` +
+                                `📌 *Subject:* ${subject}\n` +
+                                `💬 *Message:* ${message}\n` +
+                                `📅 *Timestamp:* ${new Date().toISOString()}`;
+
+            try {
+                const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: textPayload,
+                        parse_mode: 'Markdown'
+                    })
+                });
+
+                if (res.ok) {
+                    cForm.reset();
+                    cSuccessAlert.style.display = 'block';
+                    cSubmitBtn.textContent = 'Message Sent ✓';
+                } else {
+                    throw new Error('Non-200 response');
+                }
+            } catch (err) {
+                console.error(err);
+                cErrorAlert.style.display = 'block';
+                cSubmitBtn.disabled = false;
+                cSubmitBtn.textContent = 'Send Message';
+            }
+        });
+    </script>
+</body>
+</html>
